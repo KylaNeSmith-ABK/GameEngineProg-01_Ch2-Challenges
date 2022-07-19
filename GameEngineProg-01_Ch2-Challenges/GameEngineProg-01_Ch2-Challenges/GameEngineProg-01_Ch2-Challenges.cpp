@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <limits>
-using namespace std;
 
 int Sum3Nums(int firstNum, int secondNum, int thirdNum);
 float Sum3Nums(float firstNum, float secondNum, float thirdNum);
@@ -23,78 +22,78 @@ double InputIsDoubleValidation();
 
 int main()
 {
-    cout << "-- AVERAGE & SUM --" << endl;
+    std::cout << "-- AVERAGE & SUM --" << std::endl;
 
-    cout << "- Int -" << endl;
+    std::cout << "- Int -" << std::endl;
     int firstInt = 0, secondInt = 0, thirdInt = 0;
-    cout << "Please insert first int number:" << endl;
+    std::cout << "Please insert first int number:" << std::endl;
     firstInt = InputIsIntValidation();
-    cout << "Please insert second int number:" << endl;
+    std::cout << "Please insert second int number:" << std::endl;
     secondInt = InputIsIntValidation();
-    cout << "Please insert third int number:" << endl;
+    std::cout << "Please insert third int number:" << std::endl;
     thirdInt = InputIsIntValidation();
 
-    cout << "The sum of " << firstInt << ", " << secondInt << ", and " << thirdInt << " is " << Sum3Nums(firstInt, secondInt, thirdInt) << endl;
-    cout << "The average of " << firstInt << ", " << secondInt << ", and " << thirdInt << " is " << Average3Nums(firstInt, secondInt, thirdInt) << endl;
+    std::cout << "The sum of " << firstInt << ", " << secondInt << ", and " << thirdInt << " is " << Sum3Nums(firstInt, secondInt, thirdInt) << std::endl;
+    std::cout << "The average of " << firstInt << ", " << secondInt << ", and " << thirdInt << " is " << Average3Nums(firstInt, secondInt, thirdInt) << std::endl;
 
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "- Float -" << endl;
+    std::cout << "- Float -" << std::endl;
     float firstFloat = 0.0f, secondFloat = 0.0f, thirdFloat = 0.0f;
-    cout << "Please insert first float number:" << endl;
+    std::cout << "Please insert first float number:" << std::endl;
     firstFloat = InputIsFloatValidation();
-    cout << "Please insert second float number:" << endl;
+    std::cout << "Please insert second float number:" << std::endl;
     secondFloat = InputIsFloatValidation();
-    cout << "Please insert third float number:" << endl;
+    std::cout << "Please insert third float number:" << std::endl;
     thirdFloat = InputIsFloatValidation();
 
-    cout << "The sum of " << firstFloat << ", " << secondFloat << ", and " << thirdFloat << " is " << Sum3Nums(firstFloat, secondFloat, thirdFloat) << endl;
-    cout << "The average of " << firstFloat << ", " << secondFloat << ", and " << thirdFloat << " is " << Average3Nums(firstFloat, secondFloat, thirdFloat) << endl;
+    std::cout << "The sum of " << firstFloat << ", " << secondFloat << ", and " << thirdFloat << " is " << Sum3Nums(firstFloat, secondFloat, thirdFloat) << std::endl;
+    std::cout << "The average of " << firstFloat << ", " << secondFloat << ", and " << thirdFloat << " is " << Average3Nums(firstFloat, secondFloat, thirdFloat) << std::endl;
 
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "- Double -" << endl;
+    std::cout << "- Double -" << std::endl;
     double firstDouble = 0.0, secondDouble = 0.0, thirdDouble = 0.0;
-    cout << "Please insert first double number:" << endl;
+    std::cout << "Please insert first double number:" << std::endl;
     firstDouble = InputIsDoubleValidation();
-    cout << "Please insert second double number:" << endl;
+    std::cout << "Please insert second double number:" << std::endl;
     secondDouble = InputIsDoubleValidation();
-    cout << "Please insert third double number:" << endl;
+    std::cout << "Please insert third double number:" << std::endl;
     thirdDouble = InputIsDoubleValidation();
 
-    cout << "The sum of " << firstDouble << ", " << secondDouble << ", and " << thirdDouble << " is " << Sum3Nums(firstDouble, secondDouble, thirdDouble) << endl;
-    cout << "The average of " << firstDouble << ", " << secondDouble << ", and " << thirdDouble << " is " << Average3Nums(firstDouble, secondDouble, thirdDouble) << endl;
+    std::cout << "The sum of " << firstDouble << ", " << secondDouble << ", and " << thirdDouble << " is " << Sum3Nums(firstDouble, secondDouble, thirdDouble) << std::endl;
+    std::cout << "The average of " << firstDouble << ", " << secondDouble << ", and " << thirdDouble << " is " << Average3Nums(firstDouble, secondDouble, thirdDouble) << std::endl;
 
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "-- CUBED --" << endl;
+    std::cout << "-- CUBED --" << std::endl;
 
-    cout << "- Int -" << endl;
+    std::cout << "- Int -" << std::endl;
     int numInt = 0;
-    cout << "Please insert an int number:" << endl;
+    std::cout << "Please insert an int number:" << std::endl;
     numInt = InputIsIntValidation();
 
-    cout << numInt << " cubed is " << Cube(numInt) << endl;
+    std::cout << numInt << " cubed is " << Cube(numInt) << std::endl;
 
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "- Float -" << endl;
+    std::cout << "- Float -" << std::endl;
     float numFloat = 0.0f;
-    cout << "Please insert a float number:" << endl;
+    std::cout << "Please insert a float number:" << std::endl;
     numFloat = InputIsFloatValidation();
 
-    cout << numFloat << " cubed is " << Cube(numFloat) << endl;
+    std::cout << numFloat << " cubed is " << Cube(numFloat) << std::endl;
 
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "- Double -" << endl;
+    std::cout << "- Double -" << std::endl;
     double numDouble = 0.0;
-    cout << "Please insert a double number:" << endl;
+    std::cout << "Please insert a double number:" << std::endl;
     numDouble = InputIsDoubleValidation();
 
-    cout << numDouble << " cubed is " << Cube(numDouble) << endl;
+    std::cout << numDouble << " cubed is " << Cube(numDouble) << std::endl;
 
-    cout << endl;
+    std::cout << std::endl;
 }
 
 int Sum3Nums(int firstNum, int secondNum, int thirdNum)
@@ -149,15 +148,15 @@ int InputIsIntValidation()
     bool validInput = false;
     while (!validInput)
     {
-        if (cin >> num)
+        if (std::cin >> num)
         {
             return num;
         }
         else
         {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Please provide a valid integer" << endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Please provide a valid integer" << std::endl;
         }
     }
 }
@@ -169,15 +168,15 @@ float InputIsFloatValidation()
     bool validInput = false;
     while (!validInput)
     {
-        if (cin >> num)
+        if (std::cin >> num)
         {
             return num;
         }
         else
         {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Please provide a valid float" << endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Please provide a valid float" << std::endl;
         }
     }
 }
@@ -189,15 +188,15 @@ double InputIsDoubleValidation()
     bool validInput = false;
     while (!validInput)
     {
-        if (cin >> num)
+        if (std::cin >> num)
         {
             return num;
         }
         else
         {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Please provide a valid double" << endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Please provide a valid double" << std::endl;
         }
     }
 }
